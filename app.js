@@ -10,8 +10,11 @@ function agregarAmigo() {
             alert("Por favor, inserte un nombre.");
         } else {
             amigos.push(amigoAgregado);
+            document.getElementById("amigo").value="";
             console.log(amigos);
         }
        
 }
+
+
 
