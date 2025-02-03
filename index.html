@@ -20,7 +20,7 @@
         <section class="input-section">
             <h2 class="section-title">Digite el nombre de sus amigos</h2>
             <div class="input-wrapper">
-                <input type="text" id="amigo" class="input-name" maxlength="20" placeholder="Escribe un nombre">
+                <input type="text" id="amigo" class="input-name" maxlength="20" placeholder="Escribe un nombre" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ ]/g, '')">
                 <button class="button-add" onclick="agregarAmigo()">Añadir</button>
             </div>
            
