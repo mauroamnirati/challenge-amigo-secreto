@@ -8,10 +8,14 @@ function agregarAmigo() {
         if (amigoAgregado == "") {
             alert("Por favor, inserte un nombre."); //Si el campo de texto está vacío
         } else {
-            amigos.push(amigoAgregado); //Agrego el nombre al array de amigos
-            document.getElementById("amigo").value="";
-            actualizarListaAmigos(); //Sumo el nombre a la lista
-            console.log(amigos);
+            if (amigos.includes(amigoAgregado)) {
+                alert("Este nombre ya ha sido ingresado"); //Verifica si el nombre ya está en la lista
+            } else {
+                amigos.push(amigoAgregado); //Agrego el nombre al array de amigos
+                document.getElementById("amigo").value="";
+                actualizarListaAmigos(); //Sumo el nombre a la lista
+                console.log(amigos);
+            }
         }
        
 }
